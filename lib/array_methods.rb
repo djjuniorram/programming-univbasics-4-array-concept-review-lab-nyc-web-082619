@@ -18,9 +18,15 @@ def find_max_value(array)
 end
 
 def find_min_value(array)
-  counter = 0
-  # Add your solution here
-  while counter < array.length do
-    return array.min
-  end
+  min = 0
+    array.length.times do |count|
+      if count == 0
+        min = array[count]
+      else
+        if array[count] < min
+          min = array[count]
+        end
+      end
+    end
+  min
 end
